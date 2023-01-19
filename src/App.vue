@@ -1,10 +1,11 @@
 <script>
 
 import axios from 'axios';
+import ProjectCard from './components/ProjectCard.vue';
 
 export default {
     components: {
-
+        ProjectCard
     },
     data() {
         return {
@@ -37,8 +38,18 @@ export default {
 }
 </script>
 
-<template>
-    <h1>projects</h1>
+<template v-if="posts">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col" v-for="post in posts.data">
+                    <ProjectCard>
+
+                    </ProjectCard>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 
