@@ -46,13 +46,13 @@ export default {
 }
 </script>
 
-<template v-if="posts">
+<template>
     <header>
         <AppNavbar></AppNavbar>
     </header>
     <section class="project_list">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-4 g-4">
+            <div class="row row-cols-2 row-cols-md-4 g-4" v-if="posts">
                 <div class="col" v-for="post in posts.data">
                     <ProjectCard :title="post.title" :description="post.description"
                         :img="getImagePath(post.cover_img)">
@@ -60,6 +60,7 @@ export default {
                     </ProjectCard>
                 </div>
             </div>
+            <div v-else>No posts available yet...</div>
         </div>
     </section>
 </template>
