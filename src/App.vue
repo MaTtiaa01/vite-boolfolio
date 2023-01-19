@@ -9,7 +9,7 @@ export default {
     },
     data() {
         return {
-            posts: null,
+            posts: {},
             error: null,
             loading: true,
             base_api_url: 'http://127.0.0.1:8000'
@@ -29,6 +29,12 @@ export default {
                     this.error = error.message
                     this.loading = false
                 })
+        },
+        getImagePath(path) {
+            if (path) {
+                return this.base_api_url + '/storage/' + path
+            }
+            return '/img/placeholder.png'
         }
     },
 
@@ -41,9 +47,10 @@ export default {
 <template v-if="posts">
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row row-cols-2 row-cols-md-4">
                 <div class="col" v-for="post in posts.data">
-                    <ProjectCard>
+                    <ProjectCard :title="post.title" :description="post.description"
+                        :img="getImagePath(post.cover_img)">
 
                     </ProjectCard>
                 </div>
@@ -53,6 +60,6 @@ export default {
 </template>
 
 
-<style>
-
+<style lang="scss" scoped>
+@use './styles/general.scss';
 </style>

@@ -3,8 +3,9 @@ export default {
     name: 'ProjectCard',
     props: {
         title: String,
-        description: String
-    }
+        description: String,
+        img: String
+    },
 
 
 }
@@ -14,8 +15,8 @@ export default {
 
 
 <template>
-    <div class="card">
-        <img class="card-img" src="{{ img }}" alt="">
+    <div class="card p-3 border-3 rounde-3">
+        <img class="card-image" :src="img" alt="">
         <div class="card-body">
             <h3>{{ title }}</h3>
             <p>{{ description }}</p>
