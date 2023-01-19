@@ -2,10 +2,12 @@
 
 import axios from 'axios';
 import ProjectCard from './components/ProjectCard.vue';
+import AppNavbar from './components/AppNavbar.vue';
 
 export default {
     components: {
-        ProjectCard
+        ProjectCard,
+        AppNavbar
     },
     data() {
         return {
@@ -45,9 +47,12 @@ export default {
 </script>
 
 <template v-if="posts">
-    <section>
+    <header>
+        <AppNavbar></AppNavbar>
+    </header>
+    <section class="project_list">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-4">
+            <div class="row row-cols-2 row-cols-md-4 g-4">
                 <div class="col" v-for="post in posts.data">
                     <ProjectCard :title="post.title" :description="post.description"
                         :img="getImagePath(post.cover_img)">
@@ -60,6 +65,11 @@ export default {
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss" >
 @use './styles/general.scss';
+
+header {
+    background-color: black;
+    margin-bottom: 1rem;
+}
 </style>

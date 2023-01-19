@@ -15,7 +15,7 @@ export default {
 
 
 <template>
-    <div class="card p-3 border-3 rounde-3">
+    <div class="card p-3 rounded-3">
         <img class="card-image" :src="img" alt="">
         <div class="card-body">
             <h3>{{ title }}</h3>
@@ -25,6 +25,6 @@ export default {
 </template>
 
 
-<style>
+<style lang="scss" scoped>
 
 </style>
