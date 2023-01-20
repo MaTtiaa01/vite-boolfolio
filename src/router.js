@@ -5,7 +5,7 @@ import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
 import BlogView from './views/BlogView.vue'
 import ContactsView from './views/ContactsView.vue'
-import SinglePostView from './views/SinglePostView.vue'
+import SingleProjectView from './views/SingleProjectView.vue'
 import NotFoundView from './views/NotFoundView.vue'
 
 const router = createRouter({
@@ -33,8 +33,8 @@ const router = createRouter({
         },
         {
             path: '/blog/:id',
-            name: 'single-post',
-            component: SinglePostView
+            name: 'single-project',
+            component: SingleProjectView
         },
         {
             path: '/:pathMatch(.*)*',

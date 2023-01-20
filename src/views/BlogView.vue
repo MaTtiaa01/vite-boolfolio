@@ -9,7 +9,7 @@ export default {
     },
     data() {
         return {
-            posts: {},
+            projects: {},
             error: null,
             loading: true,
             base_api_url: 'http://127.0.0.1:8000'
@@ -21,7 +21,7 @@ export default {
                 .get(url)
                 .then(response => {
                     console.log(response.data.results)
-                    this.posts = response.data.results
+                    this.projects = response.data.results
                     this.loading = false
                 })
                 .catch(error => {
@@ -49,15 +49,15 @@ export default {
     <h1>blog</h1>
     <section class="project_list">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-4 g-4" v-if="posts">
-                <div class="col" v-for="post in posts.data">
-                    <ProjectCard :title="post.title" :description="post.description"
-                        :img="getImagePath(post.cover_img)">
+            <div class="row row-cols-2 row-cols-md-4 g-4" v-if="projects">
+                <div class="col" v-for="project in projects.data">
+                    <ProjectCard :title="project.title" :description="project.description"
+                        :img="getImagePath(project.cover_img)">
 
                     </ProjectCard>
                 </div>
             </div>
-            <div v-else>No posts available yet...</div>
+            <div v-else>No projects available yet...</div>
         </div>
     </section>
 

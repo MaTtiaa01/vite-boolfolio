@@ -5,7 +5,7 @@ export default {
     name: 'SinglePostView',
     data() {
         return {
-            post: {},
+            project: [],
             loading: true,
             api_base_url: 'http://127.0.0.1:8000'
         }
@@ -18,16 +18,17 @@ export default {
             axios
                 .get(url)
                 .then(response => {
-                    //console.log(response.data);
+
                     if (response.data.success) {
-                        this.post = response.data.results
+                        this.project = response.data.results
                         this.loading = false
                     } else {
-                        /* TODO: handle the not found post  
+                        /* TODO: handle the not found project  
          404 
          */
                         // https://router.vuejs.org/guide/essentials/navigation.html#navigate-to-a-different-location
                     }
+                    console.log(response.data.results.technologies);
                 })
                 .catch(error => {
                     error.log(error.message)
@@ -36,6 +37,7 @@ export default {
     },
     mounted() {
         this.getSingleProject()
+        //console.log(this.project);
     }
 }
 </script>
@@ -43,10 +45,16 @@ export default {
 
 <template>
 
-    <div class="single_post">
-        {{ $route.params.id }}
-
-        <h1>single post</h1>
+    <div class="single-post" v-if="project">
+        <img class="img-fluid w-100" :src="api_base_url + '/storage/' + project.cover_img" :alt="project.title">
+        <div class="container">
+            <h2>
+                {{ project.title }}
+            </h2>
+            <div class="content">
+                {{ project.description }}
+            </div>
+        </div>
     </div>
 
 </template>
