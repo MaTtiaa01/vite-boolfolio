@@ -20,8 +20,8 @@ export default {
     </header>
     <main>
         <AppBanner></AppBanner>
-        <router-view></router-view>
     </main>
+    <router-view></router-view>
 
 </template>
 

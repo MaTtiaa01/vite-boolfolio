@@ -23,15 +23,12 @@ export default {
                         this.project = response.data.results
                         this.loading = false
                     } else {
-                        /* TODO: handle the not found project  
-         404 
-         */
-                        // https://router.vuejs.org/guide/essentials/navigation.html#navigate-to-a-different-location
+                        this.$router.push({ name: 'not-found' })
                     }
                     console.log(response.data.results);
                 })
                 .catch(error => {
-                    error.log(error.message)
+                    console.log(error.message)
                 })
         },
         getImagePath(path) {
@@ -59,12 +56,12 @@ export default {
             </h2>
             <div class="content">
                 {{ project.description }}
-                <div class="technologies">
+                <!-- <div class="technologies">
                     <strong>TECHNOLOGIES: </strong> {{ project.technologies.name }}
                 </div>
                 <div class="type">
                     <strong> TYPE: </strong>{{ project.type.name }}
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

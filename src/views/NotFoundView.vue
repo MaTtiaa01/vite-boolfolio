@@ -1,15 +1,23 @@
 <script>
+
 export default {
-    name: 'NotFoundView'
+    name: 'NotFoundView',
+
+
 }
 </script>
 
-
 <template>
-    <h1>error</h1>
+
+    <div class="container text-center py-5">
+        <p class="lead">
+            Ops, Page not found!
+        </p>
+        <router-link to="/">Go to Homepage</router-link>
+
+    </div>
 
 </template>
-
 
 
 <style lang="scss" scoped>
