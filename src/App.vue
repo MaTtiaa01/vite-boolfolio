@@ -50,7 +50,8 @@ export default {
     <header>
         <AppNavbar></AppNavbar>
     </header>
-    <section class="project_list">
+    <router-view></router-view>
+    <!-- <section class="project_list">
         <div class="container">
             <div class="row row-cols-2 row-cols-md-4 g-4" v-if="posts">
                 <div class="col" v-for="post in posts.data">
@@ -62,7 +63,7 @@ export default {
             </div>
             <div v-else>No posts available yet...</div>
         </div>
-    </section>
+    </section> -->
 </template>
 
 
