@@ -5,7 +5,7 @@ export default {
     name: 'SinglePostView',
     data() {
         return {
-            project: [],
+            project: null,
             loading: true,
             api_base_url: 'http://127.0.0.1:8000'
         }
@@ -28,11 +28,17 @@ export default {
          */
                         // https://router.vuejs.org/guide/essentials/navigation.html#navigate-to-a-different-location
                     }
-                    console.log(response.data.results.technologies);
+                    console.log(response.data.results);
                 })
                 .catch(error => {
                     error.log(error.message)
                 })
+        },
+        getImagePath(path) {
+            if (path) {
+                return this.base_api_url + '/storage/' + path
+            }
+            return '/img/placeholder.png'
         }
     },
     mounted() {
@@ -45,17 +51,24 @@ export default {
 
 <template>
 
-    <div class="single-post" v-if="project">
-        <img class="img-fluid w-100" :src="api_base_url + '/storage/' + project.cover_img" :alt="project.title">
+    <div class="single-post text-center" v-if="!loading">
+        <img class="img-fluid " :src="getImagePath(project.cover_img)" :alt="project.title">
         <div class="container">
             <h2>
                 {{ project.title }}
             </h2>
             <div class="content">
                 {{ project.description }}
+                <div class="technologies">
+                    <strong>TECHNOLOGIES: </strong> {{ project.technologies.name }}
+                </div>
+                <div class="type">
+                    <strong> TYPE: </strong>{{ project.type.name }}
+                </div>
             </div>
         </div>
     </div>
+
 
 </template>
 
