@@ -2,10 +2,13 @@
 
 
 import AppNavbar from './components/AppNavbar.vue';
+import AppBanner from './components/AppBanner.vue';
+
 
 export default {
     components: {
-        AppNavbar
+        AppNavbar,
+        AppBanner
     },
 
 }
@@ -15,7 +18,10 @@ export default {
     <header>
         <AppNavbar></AppNavbar>
     </header>
-    <router-view></router-view>
+    <main>
+        <AppBanner></AppBanner>
+        <router-view></router-view>
+    </main>
 
 </template>
 
@@ -25,6 +31,5 @@ export default {
 
 header {
     background-color: black;
-    margin-bottom: 1rem;
 }
 </style>

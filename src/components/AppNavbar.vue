@@ -6,7 +6,7 @@ export default {
 
 <template>
 
-    <nav class="nav justify-content-center py-3">
+    <nav class="nav justify-content-center py-3 ">
         <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
         <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
         <router-link class="nav-link" :to="{ name: 'blog' }">blog</router-link>
@@ -18,7 +18,11 @@ export default {
 
 
 <style lang="scss" scoped>
-a {
-    color: white;
+nav {
+
+
+    a {
+        color: white;
+    }
 }
 </style>

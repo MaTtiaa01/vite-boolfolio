@@ -24,8 +24,8 @@ export default {
 
 <style lang="scss" scoped>
 .home_page {
-    min-height: 100vh;
     background-color: black;
     color: beige;
+    padding: 5rem 0;
 }
 </style>
