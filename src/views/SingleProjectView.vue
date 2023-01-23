@@ -49,19 +49,25 @@ export default {
 <template>
 
     <div class="single-post text-center py-5" v-if="!loading">
-        <img class="img-fluid " :src="getImagePath(project.cover_img)" :alt="project.title">
         <div class="container">
-            <h2>
+            <img class="img-fluid " :src="getImagePath(project.cover_img)" :alt="project.title">
+            <h2 class="text-uppercase py-3">
                 {{ project.title }}
             </h2>
             <div class="content">
-                {{ project.description }}
-                <!-- <div class="technologies">
-                    <strong>TECHNOLOGIES: </strong> {{ project.technologies.name }}
+                <div class="description" v-if="project.description">
+                    {{ project.description }}
                 </div>
-                <div class="type">
+                <div class="technologies" v-if="project.technologies != []">
+                    <strong>TECHNOLOGIES: </strong>
+                    <span v-for="technology in project.technologies">
+                        #{{ technology.name }}
+                    </span>
+
+                </div>
+                <div class="type" v-if="project.type">
                     <strong> TYPE: </strong>{{ project.type.name }}
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -72,5 +78,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+img {
+    max-height: 300px;
+}
 </style>
