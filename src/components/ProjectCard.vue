@@ -4,7 +4,8 @@ export default {
     props: {
         title: String,
         description: String,
-        img: String
+        img: String,
+        project: Object
     },
 
 
@@ -20,7 +21,8 @@ export default {
         <div class="card-body">
             <h3>{{ title }}</h3>
             <p>{{ description }}</p>
-            <a class="btn btn-secondary btn-sm" href="">Discover more</a>
+            <router-link class="btn btn-secondary btn-sm"
+                :to="{ name: 'single-project', params: { id: project.id } }">Discover more</router-link>
         </div>
     </div>
 </template>

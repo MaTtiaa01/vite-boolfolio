@@ -33,7 +33,7 @@ export default {
         },
         getImagePath(path) {
             if (path) {
-                return this.base_api_url + '/storage/' + path
+                return this.api_base_url + '/storage/' + path
             }
             return '/img/placeholder.png'
         }
@@ -48,7 +48,7 @@ export default {
 
 <template>
 
-    <div class="single-post text-center" v-if="!loading">
+    <div class="single-post text-center py-5" v-if="!loading">
         <img class="img-fluid " :src="getImagePath(project.cover_img)" :alt="project.title">
         <div class="container">
             <h2>

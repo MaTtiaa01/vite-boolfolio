@@ -51,7 +51,7 @@ export default {
             <h1 class="text-uppercase py-3">Portoflio</h1>
             <div class="row row-cols-2 row-cols-md-3 g-4" v-if="projects">
                 <div class="col" v-for="project in projects.data">
-                    <ProjectCard :title="project.title" :description="project.description"
+                    <ProjectCard :title="project.title" :description="project.description" :project="project"
                         :img="getImagePath(project.cover_img)">
 
                     </ProjectCard>
