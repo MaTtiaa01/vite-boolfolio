@@ -3,12 +3,13 @@
 
 import AppNavbar from './components/AppNavbar.vue';
 import AppBanner from './components/AppBanner.vue';
-
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
     components: {
         AppNavbar,
-        AppBanner
+        AppBanner,
+        AppFooter
     },
 
 }
@@ -20,8 +21,9 @@ export default {
     </header>
     <main>
         <AppBanner></AppBanner>
+        <router-view></router-view>
     </main>
-    <router-view></router-view>
+    <AppFooter></AppFooter>
 
 </template>
 
