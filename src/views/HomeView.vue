@@ -11,7 +11,7 @@ export default {
             <div class="box border rounded-3 py-5">
                 <h1 class="text-center text-uppercase">that's my personal portfolio</h1>
                 <p>I'm Mattia and this is my personal page with all my projects</p>
-                <router-link class="btn btn-danger btn-sm" :to="{ name: 'blog' }">Check it out</router-link>
+                <router-link class="btn btn-danger btn-sm" :to="{ name: 'portfolio' }">Check it out</router-link>
             </div>
         </div>
     </section>
