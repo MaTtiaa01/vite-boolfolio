@@ -35,6 +35,12 @@ export default {
                 return this.base_api_url + '/storage/' + path
             }
             return '/img/placeholder.png'
+        },
+        nextPage() {
+            this.getProject(this.projects.next_page_url)
+        },
+        prevPage() {
+            this.getProject(this.projects.prev_page_url)
         }
     },
 
@@ -58,6 +64,21 @@ export default {
                 </div>
             </div>
             <div v-else>No projects available yet...</div>
+            <nav v-if="projects" aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item disabled" v-if="projects.prev_page_url" @click="prevPage()">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item" v-if="projects.next_page_url" @click="nextPage()">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </section>
 
@@ -66,5 +87,9 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.container {
+    nav {
+        margin-top: 3rem;
+    }
+}
 </style>
