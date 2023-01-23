@@ -71,7 +71,9 @@ export default {
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">{{
+                        projects.current_page
+                    }}</a></li>
                     <li class="page-item" v-if="projects.next_page_url" @click="nextPage()">
                         <a class="page-link" href="#" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
