@@ -12,7 +12,8 @@ export default {
             projects: {},
             error: null,
             loading: true,
-            base_api_url: 'http://127.0.0.1:8000'
+            base_api_url: 'http://127.0.0.1:8000',
+            max: 100
         }
     },
     methods: {
@@ -41,6 +42,12 @@ export default {
         },
         prevPage() {
             this.getProject(this.projects.prev_page_url)
+        },
+        trimText(text) {
+            if (text.length > this.max) {
+                return text.slice(0, this.max) + '...'
+            }
+            return text
         }
     },
 
@@ -55,9 +62,9 @@ export default {
     <section class="project_list py-5">
         <div class="container">
             <h1 class="text-uppercase py-3">Portoflio</h1>
-            <div class="row row-cols-2 row-cols-md-3 g-4" v-if="projects">
+            <div class="row row-cols-2 row-cols-lg-3 g-4" v-if="projects">
                 <div class="col" v-for="project in projects.data">
-                    <ProjectCard :title="project.title" :description="project.description" :project="project"
+                    <ProjectCard :title="project.title" :description="trimText(project.description)" :project="project"
                         :img="getImagePath(project.cover_img)">
 
                     </ProjectCard>

@@ -36,7 +36,7 @@ export default {
                 return this.api_base_url + '/storage/' + path
             }
             return '/img/placeholder.png'
-        }
+        },
     },
     mounted() {
         this.getSingleProject()
@@ -58,7 +58,7 @@ export default {
                 <div class="description" v-if="project.description">
                     {{ project.description }}
                 </div>
-                <div class="technologies" v-if="project.technologies != []">
+                <div class="technologies" v-if="project.technologies.length > 0">
                     <strong>TECHNOLOGIES: </strong>
                     <span v-for="technology in project.technologies">
                         #{{ technology.name }}
