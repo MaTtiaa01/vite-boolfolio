@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import all components
 import HomeView from './views/HomeView.vue'
 import AboutView from './views/AboutView.vue'
-import BlogView from './views/BlogView.vue'
+import PortfolioView from './views/PortfolioView.vue'
 import ContactsView from './views/ContactsView.vue'
 import SingleProjectView from './views/SingleProjectView.vue'
 import NotFoundView from './views/NotFoundView.vue'
@@ -22,9 +22,9 @@ const router = createRouter({
             component: AboutView
         },
         {
-            path: '/blog',
-            name: 'blog',
-            component: BlogView
+            path: '/portfolio',
+            name: 'portfolio',
+            component: PortfolioView
         },
         {
             path: '/contacts',

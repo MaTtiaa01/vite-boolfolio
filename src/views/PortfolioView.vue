@@ -3,7 +3,7 @@ import ProjectCard from '../components/ProjectCard.vue';
 import axios from 'axios';
 
 export default {
-    name: 'BlogView',
+    name: 'PortfolioView',
     components: {
         ProjectCard
     },
@@ -46,10 +46,10 @@ export default {
 
 
 <template>
-    <h1>blog</h1>
-    <section class="project_list">
+    <section class="project_list py-5">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-4 g-4" v-if="projects">
+            <h1 class="text-uppercase py-3">Portoflio</h1>
+            <div class="row row-cols-2 row-cols-md-3 g-4" v-if="projects">
                 <div class="col" v-for="project in projects.data">
                     <ProjectCard :title="project.title" :description="project.description"
                         :img="getImagePath(project.cover_img)">

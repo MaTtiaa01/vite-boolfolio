@@ -9,7 +9,7 @@ export default {
     <nav class="nav justify-content-center py-3 ">
         <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
         <router-link class="nav-link" :to="{ name: 'about' }">About</router-link>
-        <router-link class="nav-link" :to="{ name: 'blog' }">blog</router-link>
+        <router-link class="nav-link" :to="{ name: 'portfolio' }">Portfolio</router-link>
         <router-link class="nav-link" :to="{ name: 'contacts' }">contacts</router-link>
 
     </nav>
