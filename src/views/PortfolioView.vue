@@ -104,9 +104,14 @@ export default {
 
 
 <style lang="scss" scoped>
-.container {
-    nav {
-        margin-top: 3rem;
+.project_list {
+    background-color: bisque;
+
+    .container {
+        nav {
+            margin-top: 3rem;
+        }
     }
+
 }
 </style>

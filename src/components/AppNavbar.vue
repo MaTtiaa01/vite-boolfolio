@@ -6,8 +6,9 @@ export default {
 
 <template>
 
-    <nav class="nav justify-content-around py-3 d-flex align-items center">
+    <nav class="nav justify-content-around py-3 d-flex align-items-center">
         <div class="logo">
+            <img src="../assets/img/logo-2.PNG" alt="">
         </div>
         <div class="commands d-flex align-items center">
             <router-link class="nav-link" :to="{ name: 'home' }">Home</router-link>
