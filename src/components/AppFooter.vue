@@ -11,7 +11,7 @@ export default {
         </div>
         <div class="links d-flex align-items-center justify-content-around py-5">
             <div class="github">
-                <a href="#">
+                <a href="https://github.com/MaTtiaa01?tab=repositories">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
                         class="bi bi-github" viewBox="0 0 16 16">
                         <path
