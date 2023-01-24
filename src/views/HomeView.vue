@@ -16,40 +16,44 @@ export default {
 
         </div>
         <div class="code">
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="right">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="right">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="right">
+            <marquee behavior="scroll" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
-            <marquee behavior="" direction="left">
+            <marquee behavior="scroll" direction="left">
                 &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
             </marquee>
         </div>
@@ -114,7 +118,7 @@ export default {
         position: absolute;
         left: 25%;
         top: 30%;
-        max-width: 300px;
+        max-width: 250px;
         font-size: 5px;
         font-weight: bold;
         color: rgb(6, 255, 6);
