@@ -9,8 +9,11 @@ export default {
     <section class="home_page d-flex align-items-center">
         <img src="../assets/img/Untitled Project.jpg" alt="">
         <div class="description ">
-            <span> Mattia Barbieri</span> <br>
-            <span>Full Stack Developer</span>
+            <div class="portfolio ">
+                portfolio
+                <span> Mattia Barbieri</span>
+            </div>
+
         </div>
         <div class="code">
             <marquee behavior="" direction="right">
@@ -72,17 +75,38 @@ export default {
 
     .description {
         position: absolute;
-        right: 20%;
+        right: 15%;
         bottom: 20%;
         color: green;
         font-size: 30px;
-        font-family: 'Nanum Gothic Coding', monospace;
         padding: 1rem;
 
-        span {
+        // span {
+        //     font-weight: bold;
+        //     background-color: rgb(0, 0, 75);
+        //     padding: 0.3rem;
+        //     position: absolute;
+        // }
+
+        .portfolio {
+            position: relative;
+            color: white;
             font-weight: bold;
-            background-color: rgb(0, 0, 75);
-            padding: 0.3rem;
+            font-size: 80px;
+
+            span {
+                font-weight: bold;
+                padding: 0 2rem;
+                font-size: 25px;
+                background-image: url('../assets/img/Untitled\ Project.jpg');
+                object-fit: cover;
+                background-position: bottom;
+                position: absolute;
+                bottom: 0.3rem;
+                left: 10%;
+                color: white;
+                font-family: 'Nanum Gothic Coding', monospace;
+            }
         }
     }
 

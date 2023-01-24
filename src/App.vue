@@ -30,5 +30,17 @@ export default {
 
 header {
     background-color: black;
+    max-width: 2000px;
+    margin: auto;
+}
+
+main {
+    max-width: 2000px;
+    margin: auto;
+}
+
+footer {
+    max-width: 2000px;
+    margin: auto;
 }
 </style>
