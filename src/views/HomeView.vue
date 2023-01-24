@@ -7,12 +7,48 @@ export default {
 
 <template>
     <section class="home_page d-flex align-items-center">
-        <div class="container text-center px-5">
-            <div class="box border rounded-3 py-5">
-                <h1 class="text-center text-uppercase">that's my personal portfolio</h1>
-                <p>I'm Mattia and this is my personal page with all my projects</p>
-                <router-link class="btn btn-danger btn-sm" :to="{ name: 'portfolio' }">Check it out</router-link>
-            </div>
+        <img src="../assets/img/Untitled Project.jpg" alt="">
+        <div class="description ">
+            <span> Mattia Barbieri</span> <br>
+            <span>Full Stack Developer</span>
+        </div>
+        <div class="code">
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="right">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
+            <marquee behavior="" direction="left">
+                &lt;img &gt; / &lt;img &gt; / &lt;img &gt; / &lt;img &gt; /
+            </marquee>
         </div>
     </section>
 
@@ -24,8 +60,49 @@ export default {
 
 <style lang="scss" scoped>
 .home_page {
-    background-color: black;
-    color: beige;
-    padding: 5rem 0;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(70%);
+    }
+
+    .description {
+        position: absolute;
+        right: 20%;
+        bottom: 20%;
+        color: green;
+        font-size: 30px;
+        font-family: 'Nanum Gothic Coding', monospace;
+        padding: 1rem;
+
+        span {
+            font-weight: bold;
+            background-color: rgb(0, 0, 75);
+            padding: 0.3rem;
+        }
+    }
+
+    .code {
+        position: absolute;
+        left: 25%;
+        top: 30%;
+        max-width: 300px;
+        font-size: 5px;
+        font-weight: bold;
+        color: rgb(6, 255, 6);
+        // text-shadow:
+        //     0 0 7px #fff,
+        //     0 0 10px #fff,
+        //     0 0 21px #fff,
+        //     0 0 42px #fff,
+        //     0 0 82px #fff,
+        //     0 0 92px #fff,
+        //     0 0 102px #fff,
+        //     0 0 151px #fff;
+    }
 }
 </style>
