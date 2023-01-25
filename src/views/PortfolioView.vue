@@ -1,5 +1,6 @@
 <script>
 import ProjectCard from '../components/ProjectCard.vue';
+import { store } from '../store.js';
 import axios from 'axios';
 
 export default {
@@ -9,10 +10,10 @@ export default {
     },
     data() {
         return {
+            store,
             projects: {},
             error: null,
             loading: true,
-            base_api_url: 'http://127.0.0.1:8000',
             max: 100
         }
     },
@@ -31,12 +32,6 @@ export default {
                     this.loading = false
                 })
         },
-        getImagePath(path) {
-            if (path) {
-                return this.base_api_url + '/storage/' + path
-            }
-            return '/img/placeholder.png'
-        },
         nextPage() {
             this.getProject(this.projects.next_page_url)
         },
@@ -52,7 +47,7 @@ export default {
     },
 
     mounted() {
-        this.getProject(this.base_api_url + '/api/project')
+        this.getProject(this.store.base_api_url + '/api/project')
     }
 }
 </script>
@@ -65,7 +60,7 @@ export default {
             <div class="row row-cols-2 row-cols-lg-3 g-4" v-if="projects">
                 <div class="col" v-for="project in projects.data">
                     <ProjectCard :title="project.title" :description="trimText(project.description)" :project="project"
-                        :img="getImagePath(project.cover_img)">
+                        :img="store.getImagePath(project.cover_img)">
 
                     </ProjectCard>
                 </div>

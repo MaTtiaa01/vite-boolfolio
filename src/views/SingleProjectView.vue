@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios'
+import { store } from '../store.js'
 
 export default {
     name: 'SinglePostView',
@@ -7,13 +8,13 @@ export default {
         return {
             project: null,
             loading: true,
-            api_base_url: 'http://127.0.0.1:8000'
+            store
         }
     },
     methods: {
         getSingleProject() {
             //console.log(this.$route.params.id);
-            const url = this.api_base_url + '/api/projects/' + this.$route.params.id
+            const url = this.store.base_api_url + '/api/projects/' + this.$route.params.id
 
             axios
                 .get(url)
@@ -31,12 +32,6 @@ export default {
                     console.log(error.message)
                 })
         },
-        getImagePath(path) {
-            if (path) {
-                return this.api_base_url + '/storage/' + path
-            }
-            return '/img/placeholder.png'
-        },
     },
     mounted() {
         this.getSingleProject()
@@ -50,7 +45,7 @@ export default {
 
     <div class="single-post text-center py-5" v-if="!loading">
         <div class="container">
-            <img class="img-fluid " :src="getImagePath(project.cover_img)" :alt="project.title">
+            <img class="img-fluid " :src="store.getImagePath(project.cover_img)" :alt="project.title">
             <h2 class="text-uppercase py-3">
                 {{ project.title }}
             </h2>
