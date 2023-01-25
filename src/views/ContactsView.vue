@@ -50,8 +50,8 @@ export default {
 
 
 <template>
-    <div class="container">
-        <h1>contacts</h1>
+    <div class="container py-5">
+        <h1>Contact Me</h1>
         <form @submit.prevent="sendForm()">
 
             <div v-if="this.success" class="alert alert-primary" role="alert">
@@ -107,5 +107,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+p {
+    color: red;
+}
 </style>
