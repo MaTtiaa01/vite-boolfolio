@@ -56,7 +56,7 @@ export default {
     <section class="contacts">
         <img src="../assets/img/Unknown.jpg" alt="">
         <div class="container p-4">
-            <h3 class="text-center text-white">Get in Touch with me</h3>
+            <h3 class="text-center text-white">Get in Touch</h3>
             <form @submit.prevent="sendForm()">
 
                 <div v-if="this.success" class="alert alert-primary" role="alert">
