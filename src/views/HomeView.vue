@@ -85,13 +85,6 @@ export default {
         font-size: 30px;
         padding: 1rem;
 
-        // span {
-        //     font-weight: bold;
-        //     background-color: rgb(0, 0, 75);
-        //     padding: 0.3rem;
-        //     position: absolute;
-        // }
-
         .portfolio {
             position: relative;
             color: white;
@@ -122,15 +115,6 @@ export default {
         font-size: 5px;
         font-weight: bold;
         color: rgb(6, 255, 6);
-        // text-shadow:
-        //     0 0 7px #fff,
-        //     0 0 10px #fff,
-        //     0 0 21px #fff,
-        //     0 0 42px #fff,
-        //     0 0 82px #fff,
-        //     0 0 92px #fff,
-        //     0 0 102px #fff,
-        //     0 0 151px #fff;
     }
 }
 </style>

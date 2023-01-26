@@ -50,64 +50,92 @@ export default {
 
 
 <template>
-    <div class="container py-5">
-        <h1>Contact Me</h1>
-        <form @submit.prevent="sendForm()">
+    <section class="contacts">
+        <img src="../assets/img/Unknown.jpg" alt="">
+        <div class="container p-4">
+            <h3 class="text-center text-white">Get in touch with me</h3>
+            <form @submit.prevent="sendForm()">
 
-            <div v-if="this.success" class="alert alert-primary" role="alert">
-                <strong>The message has been sent successfully</strong>
-            </div>
+                <div v-if="this.success" class="alert alert-primary" role="alert">
+                    <strong>The message has been sent successfully</strong>
+                </div>
 
 
-            <!-- name -->
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" id="name" v-model="name" class="form-control" placeholder=""
-                    aria-describedby="helpId">
-                <small id="helpId" class="text-muted">Type the company name</small>
-            </div>
-            <!-- error message -->
-            <p v-for="error in errors.name">
-                {{ error }}
-            </p>
+                <!-- name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" id="name" v-model="name" class="form-control" placeholder=""
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Type the company name</small>
+                </div>
+                <!-- error message -->
+                <p v-for="error in errors.name">
+                    {{ error }}
+                </p>
 
-            <!-- email -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" id="email" v-model="email" class="form-control" placeholder=""
-                    aria-describedby="helpId">
-                <small id="helpId" class="text-muted">Type your email</small>
-            </div>
-            <!-- error message -->
-            <p v-for="error in errors.email">
-                {{ error }}
-            </p>
+                <!-- email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" v-model="email" class="form-control" placeholder=""
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Type your email</small>
+                </div>
+                <!-- error message -->
+                <p v-for="error in errors.email">
+                    {{ error }}
+                </p>
 
-            <!-- message -->
-            <!-- TODO CHANGE INPUT IN TEXTAREA -->
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <input type="text" name="message" id="message" v-model="message" class="form-control" placeholder=""
-                    aria-describedby="helpId">
-                <small id="helpId" class="text-muted">Write the message</small>
-            </div>
-            <!-- error message -->
-            <p v-for="error in errors.message">
-                {{ error }}
-            </p>
+                <!-- message -->
+                <!-- TODO CHANGE INPUT IN TEXTAREA -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <input type="text" name="message" id="message" v-model="message" class="form-control" placeholder=""
+                        aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Write the message</small>
+                </div>
+                <!-- error message -->
+                <p v-for="error in errors.message">
+                    {{ error }}
+                </p>
 
-            <button :disabled="loading" class="btn btn-primary" type="submit">
-                {{ loading? 'Sending...': 'Contact me' }}
-            </button>
+                <button :disabled="loading" class="btn btn-primary" type="submit">
+                    {{ loading? 'Sending...': 'Contact me' }}
+                </button>
 
-        </form>
-    </div>
+            </form>
+        </div>
+
+    </section>
 </template>
 
 
 
 <style lang="scss" scoped>
-p {
-    color: red;
+.contacts {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 800px;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .container {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        background-color: transparentize($color: #000000, $amount: 0.3);
+        border-radius: 30px;
+
+        p {
+            color: red;
+        }
+
+        form {
+            color: white;
+        }
+    }
+
 }
 </style>
