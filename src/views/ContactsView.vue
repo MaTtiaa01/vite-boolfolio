@@ -20,6 +20,9 @@ export default {
         sendForm() {
             this.loading = true
 
+
+            this.errors = {};
+
             const data = {
                 'name': this.name,
                 'email': this.email,
@@ -53,12 +56,14 @@ export default {
     <section class="contacts">
         <img src="../assets/img/Unknown.jpg" alt="">
         <div class="container p-4">
-            <h3 class="text-center text-white">Get in touch with me</h3>
+            <h3 class="text-center text-white">Get in Touch with me</h3>
             <form @submit.prevent="sendForm()">
 
                 <div v-if="this.success" class="alert alert-primary" role="alert">
                     <strong>The message has been sent successfully</strong>
                 </div>
+
+
 
 
                 <!-- name -->
@@ -86,13 +91,12 @@ export default {
                 </p>
 
                 <!-- message -->
-                <!-- TODO CHANGE INPUT IN TEXTAREA -->
-                <div class="mb-3">
+                <div class="mb-3 d-flex flex-column">
                     <label for="message" class="form-label">Message</label>
-                    <input type="text" name="message" id="message" v-model="message" class="form-control" placeholder=""
-                        aria-describedby="helpId">
+                    <textarea class="p-3" name="message" id="message" cols="100" rows="8" v-model="message"></textarea>
                     <small id="helpId" class="text-muted">Write the message</small>
                 </div>
+
                 <!-- error message -->
                 <p v-for="error in errors.message">
                     {{ error }}
@@ -123,8 +127,10 @@ export default {
 
     .container {
         position: absolute;
-        top: 2rem;
-        right: 2rem;
+        top: 50%;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: transparentize($color: #000000, $amount: 0.3);
         border-radius: 30px;
 
@@ -134,6 +140,14 @@ export default {
 
         form {
             color: white;
+
+            button {
+                border: 2px solid transparent;
+            }
+
+            button:hover {
+                border: 2px solid black;
+            }
         }
     }
 
