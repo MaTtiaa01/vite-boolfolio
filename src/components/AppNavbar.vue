@@ -29,6 +29,13 @@ nav {
 
     a {
         color: white;
+        border-bottom: 2px solid transparent;
+    }
+
+    a:hover {
+        border-bottom: 2px solid white;
+        text-decoration: none;
+        color: white;
     }
 
     .logo {
