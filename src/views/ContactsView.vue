@@ -91,9 +91,10 @@ export default {
                 </p>
 
                 <!-- message -->
-                <div class="mb-3 d-flex flex-column">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="p-3" name="message" id="message" cols="100" rows="8" v-model="message"></textarea>
+                <div class="mb-3 ">
+                    <label for="message" class="form-label">Message</label> <br>
+                    <textarea class="p-3 rounded-3" name="message" id="message" cols="40" rows="8"
+                        v-model="message"></textarea> <br>
                     <small id="helpId" class="text-muted">Write the message</small>
                 </div>
 
