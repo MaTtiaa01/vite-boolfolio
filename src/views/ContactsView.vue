@@ -102,7 +102,7 @@ export default {
                     {{ error }}
                 </p>
 
-                <button :disabled="loading" class="btn btn-primary" type="submit">
+                <button :disabled="loading" class="btn " type="submit">
                     {{ loading? 'Sending...': 'Contact me' }}
                 </button>
 
@@ -142,11 +142,19 @@ export default {
             color: white;
 
             button {
-                border: 2px solid transparent;
+                border: 3px solid transparent;
+                background-image: url('../assets/img/marm.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                font-size: 20px;
+                font-weight: bold;
             }
 
             button:hover {
-                border: 2px solid black;
+                border: 3px solid black;
+                color: black;
+
             }
         }
     }
