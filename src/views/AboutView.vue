@@ -86,21 +86,32 @@ export default {
 
     <section class="core py-5">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 responsive">
+            <div class="row row-cols-1 row-cols-md-2 responsive g-4">
                 <div class="col text">
+
                     <h2>
                         All the <strong>Devices</strong> <br> You Want
                     </h2>
-                    <p>Build your application for every device</p>
+                    <p class="my-5">Build your application for every device</p>
                     <a class="btn btn-secondary" href="">Contact Me</a>
+
+                    <img src="../assets/img/Minipix-One.png" alt="">
                 </div>
                 <div class="col pt-5">
-                    <img src="../assets/img/responsive.png" alt="">
+                    <img class="mt-5" src="../assets/img/responsive.png" alt="">
                 </div>
             </div>
-            <div class="row way_to_work">
+            <!-- /responsive section -->
 
+
+            <div class=" row way_to_work row-cols-1 row-cols-md-2 g-4">
+                <div class="col"></div>
+                <div class="col text">
+                    <h2>Find <strong>The Best</strong> <br> way to work</h2>
+                    <a class="btn btn-secondary" href="#">Contact Me</a>
+                </div>
             </div>
+            <!-- /work section -->
         </div>
 
     </section>
@@ -188,14 +199,47 @@ export default {
 .core {
     .row.responsive {
         .col.text {
-            background-image: url(../assets/img/Minipix-One.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: -3rem;
+                left: 0;
+                opacity: 0.1;
+            }
+
 
             h2 {
-                font-size: 50px;
+                font-size: 60px;
             }
+
+            p {
+                font-weight: bold;
+            }
+
+
+        }
+    }
+
+    .row.way_to_work {
+        margin: 5rem 0;
+
+        .col.text {
+            position: relative;
+
+            img {
+                position: absolute;
+                top: -3rem;
+                left: 0;
+                opacity: 0.1;
+            }
+
+            h2 {
+                font-size: 60px;
+                margin-bottom: 3rem;
+            }
+
+
         }
     }
 }
