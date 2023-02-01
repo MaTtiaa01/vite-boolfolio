@@ -1,9 +1,11 @@
 <script>
-
+import AppImgBanner from '../components/AppImgBanner.vue';
 
 export default {
     name: 'AboutView',
-
+    components: {
+        AppImgBanner
+    }
 }
 </script>
 
@@ -84,7 +86,7 @@ export default {
     </section>
     <!-- /languages -->
 
-    <section class="core py-5">
+    <section class="all_devices py-5">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 responsive g-4">
                 <div class="col text">
@@ -103,9 +105,21 @@ export default {
             </div>
             <!-- /responsive section -->
 
+        </div>
 
+    </section>
+    <!-- /all_devices -->
+    <div class="rotate">
+        <AppImgBanner></AppImgBanner>
+
+    </div>
+
+    <section class="work py-5">
+        <div class="container">
             <div class=" row way_to_work row-cols-1 row-cols-md-2 g-4">
-                <div class="col"></div>
+                <div class="col">
+                    <div class="runner"></div>
+                </div>
                 <div class="col text">
                     <h2>Find <strong>The Best</strong> <br> way to work</h2>
                     <a class="btn btn-secondary" href="#">Contact Me</a>
@@ -113,9 +127,8 @@ export default {
             </div>
             <!-- /work section -->
         </div>
-
+        <AppImgBanner></AppImgBanner>
     </section>
-    <!-- /core -->
 
 </template>
 
@@ -196,7 +209,7 @@ export default {
     }
 }
 
-.core {
+.all_devices {
     .row.responsive {
         .col.text {
             position: relative;
@@ -220,9 +233,38 @@ export default {
 
         }
     }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.work {
 
     .row.way_to_work {
         margin: 5rem 0;
+
+        .col {
+
+            .runner {
+                background-image: url(../assets/img/walking.jpg);
+                width: 340px;
+                height: 600px;
+                margin: 0 auto;
+                animation: walk 1s steps(5) infinite;
+
+                @keyframes walk {
+                    from {
+                        background-position: 0px;
+                    }
+
+                    to {
+                        background-position: -2000px;
+                    }
+                }
+            }
+        }
+
 
         .col.text {
             position: relative;
