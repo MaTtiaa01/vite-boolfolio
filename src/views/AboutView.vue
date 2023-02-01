@@ -84,7 +84,24 @@ export default {
     </section>
     <!-- /languages -->
 
-    <section class="core">
+    <section class="core py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 responsive">
+                <div class="col text">
+                    <h2>
+                        All the <strong>Devices</strong> <br> You Want
+                    </h2>
+                    <p>Build your application for every device</p>
+                    <a class="btn btn-secondary" href="">Contact Me</a>
+                </div>
+                <div class="col pt-5">
+                    <img src="../assets/img/responsive.png" alt="">
+                </div>
+            </div>
+            <div class="row way_to_work">
+
+            </div>
+        </div>
 
     </section>
     <!-- /core -->
@@ -164,6 +181,21 @@ export default {
                 }
             }
 
+        }
+    }
+}
+
+.core {
+    .row.responsive {
+        .col.text {
+            background-image: url(../assets/img/Minipix-One.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+
+            h2 {
+                font-size: 50px;
+            }
         }
     }
 }
