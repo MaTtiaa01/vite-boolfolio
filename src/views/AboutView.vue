@@ -23,9 +23,9 @@ export default {
                         delectus rerum neque, accusamus, ab sunt exercitationem sit qui perspiciatis quia.
                     </p>
                     <a href="#" class="btn btn-secondary mb-5">discover my projects</a>
-                    <div class="ball"></div>
-                    <div class="ball_2"></div>
-                    <div class="ball_3"></div>
+                    <div class="d-none d-lg-block ball"></div>
+                    <div class="d-none d-lg-block ball_2"></div>
+                    <div class="d-none d-lg-block ball_3"></div>
 
                 </div>
                 <div class="col">
@@ -34,6 +34,60 @@ export default {
             </div>
         </div>
     </section>
+    <!-- /jumbo -->
+
+    <section class="languages py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="d-none d-md-block col col-md-2">
+                    <h2><span class="text-uppercase">Languages</span> <br>that I speak</h2>
+                </div>
+                <div class="col-12 col-md-10">
+                    <ul class="d-flex align-items-center justify-content-around">
+                        <li>
+                            <img src="../assets/img/Bootstrap_logo.svg.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/css-badge.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/html-badge.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/js-badge.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/PHP-logo.svg.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/vue-badge.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/vite-badge.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/mysql.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/Python-logo-notext.svg.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/laravel-badge.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../assets/img/sass.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /languages -->
+
+    <section class="core">
+
+    </section>
+    <!-- /core -->
 
 </template>
 
@@ -74,6 +128,42 @@ export default {
             position: absolute;
             left: 5rem;
             bottom: 1rem;
+        }
+    }
+}
+
+.languages {
+    background-color: rgb(39, 39, 49);
+    margin: 3rem 0;
+    box-shadow: 0px 10px 5px #888, 0px -10px 5px #888;
+
+    .row {
+        .col-md-2 {
+            h2 {
+                font-weight: bold;
+                color: antiquewhite;
+                font-size: 20px;
+
+                span {
+                    color: rgba(114, 25, 114, 0.837);
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .col-md-10 {
+            ul {
+                list-style: none;
+
+                li {
+                    padding: 0 0.3rem;
+
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+
         }
     }
 }
