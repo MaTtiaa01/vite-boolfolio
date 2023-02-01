@@ -20,7 +20,7 @@ export default {
                 </a>
             </div>
             <div class="linkedin">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/mattia-barbieri-32a7b0234/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
                         class="bi bi-linkedin" viewBox="0 0 16 16">
                         <path
@@ -30,7 +30,7 @@ export default {
             </div>
         </div>
         <div class="made_by text-center text-white py-2">
-            &copy; 2023 , Made By Mattia
+            &copy; 2023 , Made By <strong>Mattia Barbieri</strong>
         </div>
     </footer>
 
