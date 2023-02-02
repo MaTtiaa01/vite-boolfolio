@@ -24,7 +24,8 @@ export default {
                         dignissimos voluptas hic nemo, blanditiis ipsa quod id laboriosam! Dolores officiis ipsa
                         delectus rerum neque, accusamus, ab sunt exercitationem sit qui perspiciatis quia.
                     </p>
-                    <a href="#" class="btn btn-secondary mb-5">discover my projects</a>
+                    <router-link :to="{ name: 'portfolio' }" class="btn btn-secondary mb-5">Discover My
+                        Projects</router-link>
                     <div class="d-none d-lg-block ball"></div>
                     <div class="d-none d-lg-block ball_2"></div>
                     <div class="d-none d-lg-block ball_3"></div>
@@ -95,7 +96,7 @@ export default {
                         All the <strong>Devices</strong> <br> You Want
                     </h2>
                     <p class="my-5">Build your application for every device</p>
-                    <a class="btn btn-secondary" href="">Contact Me</a>
+                    <router-link class="btn btn-secondary" :to="{ name: 'contacts' }">Contact Me</router-link>
 
                     <img src="../assets/img/Minipix-One.png" alt="">
                 </div>
@@ -109,20 +110,23 @@ export default {
 
     </section>
     <!-- /all_devices -->
+
     <div class="rotate">
         <AppImgBanner></AppImgBanner>
 
     </div>
 
-    <section class="work py-5">
+    <section class="work ">
         <div class="container">
             <div class=" row way_to_work row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
                     <div class="runner"></div>
                 </div>
                 <div class="col text">
-                    <h2>Find <strong>The Best</strong> <br> way to work</h2>
-                    <a class="btn btn-secondary" href="#">Contact Me</a>
+                    <div class="box">
+                        <h2>Find <strong>The Best</strong> <br> way to work</h2>
+                        <router-link class="btn btn-secondary" :to="{ name: 'contacts' }">Contact Me</router-link>
+                    </div>
                 </div>
             </div>
             <!-- /work section -->
@@ -140,6 +144,10 @@ export default {
         position: relative;
         padding-top: 3rem;
         padding-bottom: 3rem;
+
+        a {
+            font-weight: bold;
+        }
 
         .ball {
             width: 40px;
@@ -230,6 +238,10 @@ export default {
                 font-weight: bold;
             }
 
+            a {
+                font-weight: bold;
+            }
+
 
         }
     }
@@ -269,16 +281,23 @@ export default {
         .col.text {
             position: relative;
 
-            img {
-                position: absolute;
-                top: -3rem;
-                left: 0;
-                opacity: 0.1;
-            }
+            .box {
+                width: 80%;
+                padding: 4rem 2rem;
+                background-color: bisque;
+                border: 3px solid black;
+                box-shadow: 10px 10px grey;
 
-            h2 {
-                font-size: 60px;
-                margin-bottom: 3rem;
+                h2 {
+                    font-size: 60px;
+                    margin-bottom: 3rem;
+                }
+
+                a {
+                    color: bisque;
+                    font-weight: bold;
+                }
+
             }
 
 
