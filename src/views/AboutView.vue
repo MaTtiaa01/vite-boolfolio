@@ -227,6 +227,7 @@ export default {
                 top: -3rem;
                 left: 0;
                 opacity: 0.1;
+                z-index: -1;
             }
 
 
