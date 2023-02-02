@@ -48,7 +48,7 @@ nav {
     .box {
         height: auto;
         float: left;
-        transition: .5s linear;
+        transition: .2s linear;
         position: relative;
         display: block;
         overflow: hidden;
@@ -93,14 +93,14 @@ nav {
         border-color: #262626;
         height: 100%;
         transform: translateX(0);
-        transition: .3s transform linear, .3s height linear .3s;
+        transition: .2s transform linear, .2s height linear .2s;
     }
 
     .box:hover:after {
         border-color: #262626;
         height: 100%;
         transform: translateX(0);
-        transition: .3s transform linear, .3s height linear .5s;
+        transition: .2s transform linear, .2s height linear .3s;
     }
 
     a {
