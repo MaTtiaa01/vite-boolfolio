@@ -56,8 +56,11 @@ export default {
 <template>
     <section class="project_list py-5">
         <div class="container">
-            <div class="head d-flex align-items-center justify-content-between">
-                <h1 class="text-uppercase py-5">Portoflio</h1>
+            <div class="head d-flex align-items-center justify-content-between ">
+                <h1 class="text-uppercase">
+                    <span class="actual-text">&nbsp;Portfolio&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;Portfolio&nbsp;</span>
+                </h1>
                 <div class="instruction">Click the Laptop Screen to show more</div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 " v-if="projects">
@@ -104,6 +107,64 @@ export default {
 <style lang="scss" scoped>
 .project_list {
     background-color: rgb(75, 75, 75);
+
+    .head {
+        margin-bottom: 7rem;
+
+        h1 {
+            margin: 0;
+            height: auto;
+            background: transparent;
+            padding: 0;
+            border: none;
+            --border-right: 6px;
+            --text-stroke-color: rgba(255, 255, 255, 0.6);
+            --animation-color: #37FF8B;
+            --fs-size: 2em;
+            letter-spacing: 3px;
+            text-decoration: none;
+            font-size: var(--fs-size);
+            font-family: "Arial";
+            position: relative;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-stroke-color);
+        }
+
+        /* this is the text, when you hover on h1 */
+        .hover-text {
+            position: absolute;
+            box-sizing: border-box;
+            content: attr(data-text);
+            color: var(--animation-color);
+            width: 0%;
+            inset: 0;
+            border-right: var(--border-right) solid var(--animation-color);
+            overflow: hidden;
+            transition: 0.3s;
+            -webkit-text-stroke: 1px var(--animation-color);
+        }
+
+        /* hover */
+        h1:hover .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 23px var(--animation-color))
+        }
+
+        .instruction {
+            color: beige;
+            font-weight: bold;
+            text-shadow:
+                0 0 7px rgba(255, 255, 255, 0.212),
+                0 0 10px rgba(255, 255, 255, 0.212),
+                0 0 21px rgba(255, 255, 255, 0.212),
+                0 0 42px rgba(255, 255, 255, 0.212),
+                0 0 82px rgba(255, 255, 255, 0.212),
+                0 0 92px rgba(255, 255, 255, 0.212),
+                0 0 102px rgba(255, 255, 255, 0.212),
+                0 0 151px rgba(255, 255, 255, 0.212);
+        }
+    }
 
     .container {
         nav {
