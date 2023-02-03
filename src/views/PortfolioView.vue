@@ -56,8 +56,11 @@ export default {
 <template>
     <section class="project_list py-5">
         <div class="container">
-            <h1 class="text-uppercase py-3">Portoflio</h1>
-            <div class="row row-cols-2 row-cols-lg-3 g-4" v-if="projects">
+            <div class="head d-flex align-items-center justify-content-between">
+                <h1 class="text-uppercase py-5">Portoflio</h1>
+                <div class="instruction">Click the Laptop Screen to show more</div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 " v-if="projects">
                 <div class="col" v-for="project in projects.data">
                     <ProjectCard :title="project.title" :description="trimText(project.description)" :project="project"
                         :img="store.getImagePath(project.cover_img)">
@@ -100,12 +103,13 @@ export default {
 
 <style lang="scss" scoped>
 .project_list {
-    background-color: bisque;
+    background-color: rgb(75, 75, 75);
 
     .container {
         nav {
             margin-top: 3rem;
         }
+
     }
 
 }
