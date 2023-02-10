@@ -27,7 +27,7 @@ export default {
                     this.loading = false
                 })
                 .catch(error => {
-                    error.log(error.message)
+                    console.log(error.message)
                     this.error = error.message
                     this.loading = false
                 })
@@ -47,7 +47,7 @@ export default {
     },
 
     mounted() {
-        this.getProject(this.store.base_api_url + '/api/project')
+        this.getProject(this.store.base_api_url + '/api/projects')
     }
 }
 </script>
@@ -63,13 +63,15 @@ export default {
                 </h1>
                 <div class="instruction">Click the Laptop Screen to show more</div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 " v-if="projects">
+            <div class="row row-cols-1 row-cols-md-2 " v-if="this.projects.data != []">
                 <div class="col" v-for="project in projects.data">
                     <ProjectCard :title="project.title" :description="trimText(project.description)" :project="project"
                         :img="store.getImagePath(project.cover_img)">
 
                     </ProjectCard>
+
                 </div>
+
             </div>
             <div v-else-if="loading">
                 Loading...

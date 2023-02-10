@@ -124,6 +124,7 @@ export default {
         height: 800px;
         object-position: center;
         object-fit: cover;
+        opacity: 0.4;
     }
 
     .container {
