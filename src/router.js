@@ -7,6 +7,7 @@ import PortfolioView from './views/PortfolioView.vue'
 import ContactsView from './views/ContactsView.vue'
 import SingleProjectView from './views/SingleProjectView.vue'
 import NotFoundView from './views/NotFoundView.vue'
+import ContactsInfoView from "./views/ContactsInfoView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -29,7 +30,7 @@ const router = createRouter({
         {
             path: '/contacts',
             name: 'contacts',
-            component: ContactsView
+            component: ContactsInfoView
         },
         {
             path: '/portfolio/:id',
