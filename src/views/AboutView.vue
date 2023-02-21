@@ -16,13 +16,11 @@ export default {
             <div class="row row-cols-1 row-cols-md-2 align-items-center">
                 <div class="col px-5">
                     <h1>
-                        Flish survelliance because you love Freedom
+                        Hi! I'm Mattia <br>
+                        <strong>Full stack Web Developer</strong>
                     </h1>
                     <p class="py-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam quis earum laborum minus eum
-                        laudantium quidem aspernatur aliquam veritatis odit ea aliquid nam dolorum saepe tenetur vitae
-                        dignissimos voluptas hic nemo, blanditiis ipsa quod id laboriosam! Dolores officiis ipsa
-                        delectus rerum neque, accusamus, ab sunt exercitationem sit qui perspiciatis quia.
+                        I'm a junior developer with a lot of...
                     </p>
                     <router-link :to="{ name: 'portfolio' }" class="btn btn-secondary mb-5">Discover My
                         Projects</router-link>
@@ -95,7 +93,14 @@ export default {
                     <h2>
                         All the <strong>Devices</strong> <br> You Want
                     </h2>
-                    <p class="my-5">Build your application for every device</p>
+                    <p class="my-5">
+                        <span class="fs-4"><strong> Build</strong> your application for every device</span>
+
+                    <div class="my-3">More devices <strong>=</strong> more people connected </div>
+
+                    <span>Make your websites <strong>responsive</strong> </span>
+
+                    </p>
                     <router-link class="btn btn-secondary" :to="{ name: 'contacts' }">Contact Me</router-link>
 
                     <img src="../assets/img/Minipix-One.png" alt="">
@@ -133,7 +138,6 @@ export default {
         </div>
         <AppImgBanner></AppImgBanner>
     </section>
-
 </template>
 
 

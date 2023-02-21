@@ -101,14 +101,13 @@ export default {
             </nav>
         </div>
     </section>
-
 </template>
 
 
 
 <style lang="scss" scoped>
 .project_list {
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(7, 10, 32);
 
     .head {
         margin-bottom: 7rem;
