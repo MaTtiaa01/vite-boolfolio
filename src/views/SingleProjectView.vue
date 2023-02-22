@@ -53,7 +53,7 @@ export default {
                     {{ project.description }}
                 </div>
 
-                <div class="github">
+                <div class="github" v-if="project.source_code">
                     <a class="" :href="project.source_code">
                         Go to Source Code
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
