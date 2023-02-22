@@ -42,7 +42,7 @@ export default {
 
 
 <template>
-    <div class="single-post text-center py-5" v-if="!loading">
+    <div class="single_post text-center py-5" v-if="!loading">
         <div class="container">
             <img class="img-fluid " :src="store.getImagePath(project.cover_img)" :alt="project.title">
             <h2 class="text-uppercase py-3">
@@ -83,6 +83,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.single_post {
+    background-color: bisque;
+}
+
 img {
     max-height: 300px;
 }

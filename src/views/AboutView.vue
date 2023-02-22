@@ -20,7 +20,15 @@ export default {
                         <strong>Full stack Web Developer</strong>
                     </h1>
                     <p class="py-4">
-                        I'm a junior developer with a lot of...
+                        I'm a <span>junior developer</span> with a lot of... <br>
+                        Ok, let's be honest, <span>Coding is so powerful and rewarding</span>, I am always looking for new
+                        technologies
+                        from AI to 3D object, gaming, blockchain... I could go on for huors.
+                        The important thing to keep in mind is to work hard and find out new ways, new ideas and new
+                        technologies. <br>
+                        That is exactly what I'm personally trying to <span>achieve day by day</span>. <br>
+                        <span>Coding</span> for me is a <span>lifestyle</span> and discovering this fascinatig world makes
+                        me so grateful.
                     </p>
                     <router-link :to="{ name: 'portfolio' }" class="btn btn-secondary mb-5">Discover My
                         Projects</router-link>
@@ -128,8 +136,8 @@ export default {
                     <div class="runner"></div>
                 </div>
                 <div class="col text">
-                    <div class="box">
-                        <h2>Find <strong>The Best</strong> <br> way to work</h2>
+                    <div class="box text-center">
+                        <h2>Let's find together<br> <span><strong> The Best</strong></span> <br> way to work</h2>
                         <router-link class="btn btn-secondary" :to="{ name: 'contacts' }">Contact Me</router-link>
                     </div>
                 </div>
@@ -148,6 +156,21 @@ export default {
         position: relative;
         padding-top: 3rem;
         padding-bottom: 3rem;
+
+        p {
+            span {
+                color: purple;
+                text-shadow:
+                    0 0 7px rgba(128, 0, 128, 0.212),
+                    0 0 10px rgba(128, 0, 128, 0.212),
+                    0 0 21px rgba(128, 0, 128, 0.212),
+                    0 0 42px rgba(128, 0, 128, 0.212),
+                    0 0 82px rgba(128, 0, 128, 0.212),
+                    0 0 92px rgba(128, 0, 128, 0.212),
+                    0 0 102px rgba(128, 0, 128, 0.212),
+                    0 0 151px rgba(128, 0, 128, 0.212);
+            }
+        }
 
         a {
             font-weight: bold;
@@ -283,6 +306,8 @@ export default {
         }
 
 
+
+
         .col.text {
             position: relative;
 
@@ -294,8 +319,13 @@ export default {
                 box-shadow: 10px 10px grey;
 
                 h2 {
-                    font-size: 60px;
+                    font-size: 50px;
                     margin-bottom: 3rem;
+                    font-family: 'Times New Roman', Times, serif;
+
+                    span {
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    }
                 }
 
                 a {

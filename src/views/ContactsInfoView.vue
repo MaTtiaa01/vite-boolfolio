@@ -14,22 +14,17 @@ export default {
     <section class="contacts">
         <div class="container text-center d-flex flex-column justify-content-between align-items-center">
             <div class="touch ">
-                <h1>Let's Get in Touch!</h1>
+                <h1 class="text-uppercase">Let's Get in Touch!</h1>
+                <div class="mail d-flex align-items-center justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                    </svg>
+                    <div class="mx-3" href="mailto: mattia2001@live.it">mattia2001@live.it</div>
+                </div>
             </div>
 
-            <div class="mail d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                    <path
-                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                </svg>
-                <div class="mx-3" href="mailto: mattia2001@live.it">mattia2001@live.it</div>
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                    <path
-                        d="M64 208.1L256 65.9 448 208.1v47.4L289.5 373c-9.7 7.2-21.4 11-33.5 11s-23.8-3.9-33.5-11L64 255.5V208.1zM256 0c-12.1 0-23.8 3.9-33.5 11L25.9 156.7C9.6 168.8 0 187.8 0 208.1V448c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V208.1c0-20.3-9.6-39.4-25.9-51.4L289.5 11C279.8 3.9 268.1 0 256 0z" />
-                </svg>
-            </div>
         </div>
 
 
@@ -41,17 +36,18 @@ export default {
 
 <style lang="scss" scoped>
 .contacts {
-    background-image: url(../assets/img/hand.avif);
+    background-color: rgb(5, 22, 40);
+    background-image: url(../assets/img/Unknown.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 3rem 0;
+    padding-top: 3rem;
 
 
     .container {
         height: 1000px;
         margin-top: 0;
-        padding: 3rem 0;
+        padding-top: 3rem;
 
         .touch {
             width: 70%;
@@ -86,7 +82,7 @@ export default {
 
             div {
                 font-weight: bold;
-                font-size: 40px;
+                font-size: 30px;
                 text-shadow:
                     0 0 7px rgba(255, 255, 255, 0.212),
                     0 0 10px rgba(255, 255, 255, 0.212),
