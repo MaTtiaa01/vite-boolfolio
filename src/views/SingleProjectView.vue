@@ -44,7 +44,7 @@ export default {
 <template>
     <div class="single_post text-center py-5" v-if="!loading">
         <div class="container">
-            <img class="img-fluid mb-3" :src="store.base_api_url + '/storage/' + project.cover_img" :alt="project.title">
+            <img class="img-fluid mb-3" :src="store.getImagePath(project.cover_img)" :alt="project.title">
             <h2 class="text-uppercase mb-3">
                 {{ project.title }}
             </h2>
