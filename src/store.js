@@ -6,6 +6,6 @@ export const store = reactive({
         if (path) {
             return this.base_api_url + '/storage/' + path
         }
-        return '/img/placeholder.png'
+        return './img/placeholder.png'
     },
 })
