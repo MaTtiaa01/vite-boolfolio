@@ -108,6 +108,7 @@ export default {
 <style lang="scss" scoped>
 .project_list {
     background-color: rgb(7, 10, 32);
+    min-height: 800px;
 
     .head {
         margin-bottom: 7rem;

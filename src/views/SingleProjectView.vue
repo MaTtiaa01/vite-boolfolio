@@ -44,16 +44,29 @@ export default {
 <template>
     <div class="single_post text-center py-5" v-if="!loading">
         <div class="container">
-            <img class="img-fluid " :src="store.getImagePath(project.cover_img)" :alt="project.title">
-            <h2 class="text-uppercase py-3">
+            <img class="img-fluid mb-3" :src="store.getImagePath(project.cover_img)" :alt="project.title">
+            <h2 class="text-uppercase mb-3">
                 {{ project.title }}
             </h2>
-            <div class="content">
+            <div class="content mb-3">
                 <div class="description" v-if="project.description">
                     {{ project.description }}
                 </div>
 
-                <div class="github" v-if="project.source_code">
+
+                <div class="technologies mb-3" v-if="project.technologies.length > 0">
+                    <strong>TECHNOLOGIES: </strong>
+                    <span v-for="technology in project.technologies">
+                        #{{ technology.name }}
+                    </span>
+
+                </div>
+                <div class="type mb-3" v-if="project.type">
+                    <strong> TYPE: </strong>{{ project.type.name }}
+                </div>
+
+
+                <div class="github " v-if="project.source_code">
                     <a class="" :href="project.source_code">
                         Go to Source Code
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
@@ -64,17 +77,6 @@ export default {
                     </a>
                 </div>
 
-
-                <div class="technologies" v-if="project.technologies.length > 0">
-                    <strong>TECHNOLOGIES: </strong>
-                    <span v-for="technology in project.technologies">
-                        #{{ technology.name }}
-                    </span>
-
-                </div>
-                <div class="type" v-if="project.type">
-                    <strong> TYPE: </strong>{{ project.type.name }}
-                </div>
             </div>
         </div>
     </div>
@@ -85,16 +87,23 @@ export default {
 <style lang="scss" scoped>
 .single_post {
     background-color: bisque;
-}
+    min-height: 500px;
 
-img {
-    max-height: 300px;
-}
+    img {
+        max-height: 300px;
+    }
 
-.github {
-    a {
-        color: black;
-        text-decoration: none;
+    .github {
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-size: 20px;
+            text-decoration: underline;
+        }
     }
 }
 </style>
