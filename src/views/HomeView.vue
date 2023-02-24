@@ -92,7 +92,7 @@ export default {
                 font-weight: bold;
                 padding: 0 2rem;
                 font-size: 25px;
-                background-image: url('../assets/img/Untitled\ Project.jpg');
+                background-image: url('../assets/img/home_background.jpg');
                 object-fit: cover;
                 background-position: bottom;
                 position: absolute;
