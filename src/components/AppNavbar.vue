@@ -5,10 +5,9 @@ export default {
 </script>
 
 <template>
-
     <nav class="nav justify-content-around py-3 d-flex align-items-center">
         <div class="logo d-flex align-items-center">
-            <img src="../assets/img/logo-2.PNG" alt="">
+            <img src="../assets/img/logo-2.png" alt="">
             <div>Full Stack Developer</div>
         </div>
         <div class="commands d-sm-flex align-items center justify-content-between d-block">
@@ -36,9 +35,6 @@ export default {
         </div>
 
     </nav>
-
-
-
 </template>
 
 
