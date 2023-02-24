@@ -7,7 +7,7 @@ export default {
 
 <template>
     <section class="home_page d-flex align-items-center">
-        <img src="../assets/img/Untitled Project.jpg" alt="">
+        <img src="../assets/img/home_background.jpg" alt="">
         <div class="description ">
             <div class="portfolio ">
                 portfolio
@@ -58,9 +58,6 @@ export default {
             </marquee>
         </div>
     </section>
-
-
-
 </template>
 
 
