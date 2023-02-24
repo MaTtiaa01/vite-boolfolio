@@ -54,7 +54,7 @@ export default {
 
 <template>
     <section class="contacts">
-        <img src="../assets/img/Unknown.jpg" alt="">
+        <img src="../assets/img/Unknown.png" alt="">
         <div class="container p-4">
             <h3 class="text-center text-white">Get in Touch</h3>
             <form @submit.prevent="sendForm()">
@@ -104,7 +104,7 @@ export default {
                 </p>
 
                 <button :disabled="loading" class="btn " type="submit">
-                    {{ loading? 'Sending...': 'Contact me' }}
+                    {{ loading ? 'Sending...' : 'Contact me' }}
                 </button>
 
             </form>
