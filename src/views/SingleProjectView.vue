@@ -48,8 +48,8 @@ export default {
             <h2 class="text-uppercase mb-3">
                 {{ project.title }}
             </h2>
-            <div class="content mb-3">
-                <div class="description" v-if="project.description">
+            <div class="content">
+                <div class="description mb-3" v-if="project.description">
                     {{ project.description }}
                 </div>
 
@@ -93,6 +93,13 @@ export default {
         max-height: 300px;
     }
 
+    .content {
+        .description {
+            max-width: 800px;
+            margin: auto;
+        }
+    }
+
     .github {
 
         a {
@@ -101,7 +108,7 @@ export default {
         }
 
         a:hover {
-            font-size: 20px;
+            font-weight: bold;
             text-decoration: underline;
         }
     }
