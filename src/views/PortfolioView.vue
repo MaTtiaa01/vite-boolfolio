@@ -84,7 +84,7 @@ export default {
             <div v-else>No projects available yet...</div>
             <nav v-if="projects" aria-label="Page navigation">
                 <ul class="pagination">
-                    <li class="page-item disabled" v-if="projects.prev_page_url" @click="prevPage()">
+                    <li class="page-item " v-if="projects.prev_page_url" @click="prevPage()">
                         <a class="page-link" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                         </a>
