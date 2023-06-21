@@ -14,7 +14,7 @@ export default {
       store,
       projects: {},
       error: null,
-      loading: true,
+      loading: false,
       max: 100,
       pb: null,
     };
@@ -46,11 +46,7 @@ export default {
       this.projects = await this.pb
         .collection("projects")
         .getFullList({ sort: "-created" });
-      console.log(this.projects);
-
-      this.projects.forEach((element) => {
-        console.log(element.id);
-      });
+      this.loading = true;
     },
   },
 
@@ -72,33 +68,31 @@ export default {
         </h1>
         <div class="instruction">Click the Laptop Screen to show more</div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2" v-if="this.projects != []">
-        <div class="col" v-for="project in projects">
-          <ProjectCard
-            :title="project.title"
-            :description="project.description"
-            :project="project"
-            :img="this.pb.files.getUrl(project, project.cover_img)"
-          >
-          </ProjectCard>
+      <div v-if="loading">
+        <div class="row row-cols-1 row-cols-md-2" v-if="this.projects != []">
+          <div class="col" v-for="project in projects">
+            <ProjectCard
+              :title="project.title"
+              :description="project.description"
+              :project="project"
+              :img="this.pb.files.getUrl(project, project.cover_img)"
+            >
+            </ProjectCard>
+          </div>
+        </div>
+        <div v-else>Sorry...no projects available yet!</div>
+      </div>
+      <div
+        class="loader text-center d-flex justify-content-center align-items-center"
+        v-else
+      >
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
-      <div v-else-if="loading">
-        Loading...
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-hourglass-split"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"
-          />
-        </svg>
-      </div>
-      <div v-else>No projects available yet...</div>
       <nav v-if="projects" aria-label="Page navigation">
         <ul class="pagination">
           <li
@@ -191,6 +185,46 @@ export default {
   .container {
     nav {
       margin-top: 3rem;
+    }
+  }
+}
+
+.loader {
+  background-color: rgb(7, 10, 32);
+  min-height: 500px;
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #cab1b1;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #cab1b1 transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
