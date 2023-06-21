@@ -49,8 +49,7 @@ export default {
       console.log(this.projects);
 
       this.projects.forEach((element) => {
-        const url = this.pb.files.getUrl(element, element.cover_img);
-        console.log(url);
+        console.log(element.id);
       });
     },
   },
