@@ -83,8 +83,8 @@ export default {
         <div v-else>Sorry...no projects available yet!</div>
       </div>
       <div
-        class="loader text-center d-flex justify-content-center align-items-center"
         v-else
+        class="loader text-center d-flex justify-content-center align-items-center"
       >
         <div class="lds-ring">
           <div></div>
@@ -93,7 +93,8 @@ export default {
           <div></div>
         </div>
       </div>
-      <nav v-if="projects" aria-label="Page navigation">
+      <!-- page navigation -->
+      <!-- <nav v-if="projects" aria-label="Page navigation">
         <ul class="pagination">
           <li
             class="page-item"
@@ -117,7 +118,7 @@ export default {
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </div>
   </section>
 </template>

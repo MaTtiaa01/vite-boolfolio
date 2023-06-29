@@ -20,7 +20,7 @@ export default {
                         <strong>Full stack Web Developer</strong>
                     </h1>
                     <p class="py-4">
-                        I'm a <span>junior developer</span> with a lot of... <br>
+                        I'm a <span>developer</span> with a lot of... <br>
                         Ok, let's be honest, <span>Coding is so powerful and rewarding</span>, I am always looking for new
                         technologies
                         from AI to 3D object, gaming, blockchain... I could go on for huors.
@@ -47,46 +47,70 @@ export default {
 
     <section class="languages py-5">
         <div class="container">
-            <div class="row g-5">
+            <div class="row ">
                 <div class="d-none d-md-block col col-md-2">
-                    <h2><span class="text-uppercase">Languages</span> <br>that I speak</h2>
+                    <h2><span class="text-uppercase">Tech</span> <br>stack</h2>
                 </div>
-                <div class="col-12 col-md-10">
-                    <ul class="d-flex align-items-center justify-content-around">
-                        <li>
-                            <img src="../assets/img/Bootstrap_logo.svg.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/css-badge.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/html-badge.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/js-badge.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/PHP-logo.svg.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/vue-badge.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/vite-badge.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/mysql.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/Python-logo-notext.svg.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/laravel-badge.png" alt="">
-                        </li>
-                        <li>
-                            <img src="../assets/img/sass.png" alt="">
-                        </li>
-                    </ul>
+                <div class="col-10">
+                    <div class="col-md-10">
+                        <ul class="d-flex align-items-center justify-content-around">
+                            <li>
+                                <img src="../assets/img/Bootstrap_logo.svg.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/css-badge.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/html-badge.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/js-badge.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/PHP-logo.svg.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/vue-badge.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/vite-badge.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/Python-logo-notext.svg.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/laravel-badge.png" alt="">
+                            </li>
+                            <li>
+                                <img src="../assets/img/sass.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-10">
+                        <ul class="d-flex align-items-center justify-content-around">
+                            <li class="bigger">
+                                <img src="../assets/img/mysql.png" alt="">
+                            </li>
+                            <li class="bigger">
+                                <img src="../assets/img/nodejs.png" alt="">
+                            </li>
+                            <li class="bigger color">
+                                <img src="../assets/img/flutter.png" alt="">
+                            </li>
+                            <li class="bigger">
+                                <img src="../assets/img/git.png" alt="">
+                            </li>
+                            <li class="bigger color">
+                                <img src="../assets/img/firebase.png" alt="">
+                            </li>
+                            <li class="bigger">
+                                <img src="../assets/img/docker.png" alt="">
+                            </li>
+                            <li class="bigger color">
+                                <img src="../assets/img/cypress.svg" alt="">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,6 +260,17 @@ export default {
 
                     img {
                         width: 50px;
+                    }
+                }
+                li.bigger{
+                    img{
+                        width: 110px;
+                    }
+                }
+                li.color{
+                    img{
+                        width: 100px;
+                        background-color: rgba(80, 84, 87, 0.448);
                     }
                 }
             }
