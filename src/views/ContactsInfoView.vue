@@ -17,8 +17,9 @@ export default {
         <div class="d-flex flex-column justify-content-center text">
           <h1 class="text-uppercase">Let's Get in Touch!</h1>
           <div class="mail d-flex align-items-center justify-content-center">
+            <img src="../assets/img/mailbox.png" alt="mailbox" />
             <div class="mx-3" href="mailto: mattia2001@live.it">
-              <i class="fa-solid fa-mailbox-flag-up"></i> mattia2001@live.it
+              mattia2001@live.it
             </div>
           </div>
         </div>
@@ -58,6 +59,10 @@ export default {
     }
 
     .mail {
+      background-color: white;
+      img {
+        width: 80px;
+      }
       div {
         font-weight: bold;
         font-size: 22px;
