@@ -58,8 +58,8 @@ export default {
     }
 
     .mail {
-      background-color: white;
-      border: 5px solid black;
+      // background-color: white;
+      // border: 5px solid black;
       img {
         width: 80px;
       }
