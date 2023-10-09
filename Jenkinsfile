@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('open app') {
+      steps {
+        sh 'npm run dev'
+      }
+    }
+
   }
 }
